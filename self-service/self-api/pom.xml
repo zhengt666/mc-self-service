@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.cpcnet.component</groupId>
+        <artifactId>component-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.cpcnet</groupId>
+    <artifactId>self-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>self-api</name>
+    <description>self-api</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.6.13</spring-boot.version>
+    </properties>
+    <dependencies>
+        <!-- 服务间调用 Feign -->
+        <dependency>
+            <groupId>com.cpcnet.component</groupId>
+            <artifactId>component-rpc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cpcnet.component</groupId>
+            <artifactId>component-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- 打包后的JAR包名称 -->
+        <finalName>${artifactId}-${project.version}</finalName>
+    </build>
+
+</project>
